@@ -52,6 +52,18 @@ function generatePassword() {
     selectionChoices.push(...symbolArray);
   }
 
+  // need to choose randomized numbers from the ofType selections that were made and push them to a finalized container
+  let randomizedPassword = [];
+  for (let i = 0; i < pwLength; i++){
+    let randomNumber = Math.random();
+    let randomIndex = Math.floor(randomNumber * selectionChoices.length);
+    let randomCharacter = selectionChoices[randomIndex];
+    randomizedPassword.push(randomCharacter);
+  }
+  let putThemTogether = randomizedPassword.join('');
+  return putThemTogether
+
+}
 
 //---------------------------------------
 //---------------------------------------
