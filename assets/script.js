@@ -23,6 +23,13 @@ function generatePassword() {
   }
   
 
+  // make prompt windows that accept input to select which type of characters will be used in the final password
+  let lowerCaseChoice = window.confirm("Would you like LOWER CASE letters to be used in your password?\nOK = Yes, Cancel = No");
+  let upperCaseChoice = window.confirm("Would you like UPPER CASE letters to be used in your password?\nOK = Yes, Cancel = No");
+  let numberChoice = window.confirm("Would you like NUMBERS ( 0 - 9 ) to be included in your password?\nOK = Yes, Cancel = No");
+  let symbolChoice = window.confirm("Would you like SYMBOLS ( !, @, #, $, %, ^, &, *, (, ) ) to be used in your password?\nOK = Yes, Cancel = No");
+
+
 
 //---------------------------------------
 //---------------------------------------
