@@ -43,6 +43,8 @@ Florin Pop https://www.youtube.com/channel/UCeU-1X402kT-JlLdAitxSMA for use of i
 
 FreeCodeCamp https://www.freecodecamp.org/ for use of instructional videos and walkthroughs of several JavaScript topics.
 
+Walter Perry(TA) University of Texas @ Austin Coding Bootcamp UTA-VIRT-FSF-PT-10-2022-U-LOLC-MTTH for tips in after hours chat.
+
 
 
 

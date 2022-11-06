@@ -23,6 +23,10 @@ function generatePassword() {
   
 
   // make prompt windows that accept input to select which type of characters will be used in the final password
+  let statingRules = window.confirm("You must choose at least 1 of the following 4 options to continue.");
+  if (confirm === true) {
+    return
+  } else;
   let lowerCaseChoice = window.confirm("Would you like LOWER CASE letters to be used in your password?\nOK = Yes, Cancel = No");
   let upperCaseChoice = window.confirm("Would you like UPPER CASE letters to be used in your password?\nOK = Yes, Cancel = No");
   let numberChoice = window.confirm("Would you like NUMBERS ( 0 - 9 ) to be included in your password?\nOK = Yes, Cancel = No");
@@ -58,7 +62,7 @@ function generatePassword() {
   // validation of characters that are available based on the options selected are viewable in the console.log
   console.log(selectionChoices);
 
-  // need to choose randomized numbers from the ofType selections that were made and push them to a finalized container
+  // need to choose i randomized numbers from the ofType selections that were made and push them to a final string
   let randomizedPassword = [];
   for (let i = 0; i < pwLength; i++){
     let randomNumber = Math.random();
