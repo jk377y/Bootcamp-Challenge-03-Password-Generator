@@ -35,6 +35,22 @@ function generatePassword() {
   let numberArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
   let symbolArray = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
 
+  // need to create a place to store all of the chosen criterias
+  let selectionChoices = [];
+
+  // for each prompt window that type is selected, if TRUE then .push selectionChoices
+  if (lowerCaseChoice === true) {
+    selectionChoices.push(...lowerCaseArray);
+  }
+  if (upperCaseChoice === true) {
+    selectionChoices.push(...upperCaseArray);
+  }
+  if (numberChoice === true) {
+    selectionChoices.push(...numberArray);
+  }
+  if (symbolChoice === true) {
+    selectionChoices.push(...symbolArray);
+  }
 
 
 //---------------------------------------
