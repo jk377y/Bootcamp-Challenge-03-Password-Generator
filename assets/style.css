@@ -3,12 +3,11 @@
 *::after {
   box-sizing: border-box;
 }
-
+/* added some color changes to make my screen more eye friendly with less brightness by darker colors */
 :root {
   --bluecolor: #316cb4;
   --whitecolor: rgb(255, 255, 255);
   --graycolor: rgb(71, 71, 71);
-  --redcolor: rgb(255, 0, 51);
 }
 
 html,
@@ -116,7 +115,7 @@ button[disabled] {
   padding-right: 15px;
   padding-bottom: 85px;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
   margin-bottom: 10px;
   border: 2px dashed #c0c7cf;

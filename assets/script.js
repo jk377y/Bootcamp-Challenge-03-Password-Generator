@@ -7,7 +7,6 @@ let generateBtn = document.querySelector("#generate");
 //---------------------------------------
 //---------------------------------------
 
-
 // create a function that receives input to specify length of password, select ofTypes to include, and generate a random password from those selections
 function generatePassword() {
   let chooseLength = window.prompt("Using NUMBERS ( 0 - 9 )\nHow long would you like your password to be?\nYou may choose between 8 and 128 characters.");
@@ -30,10 +29,10 @@ function generatePassword() {
   let symbolChoice = window.confirm("Would you like SYMBOLS ( !, @, #, $, %, ^, &, *, (, ) ) to be used in your password?\nOK = Yes, Cancel = No");
 
   // creating arrays of 4 different types with all acceptable characters that may be used for the password
-  let lowerCaseArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'] 
-  let upperCaseArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-  let numberArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-  let symbolArray = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
+  let lowerCaseArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; 
+  let upperCaseArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  let numberArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  let symbolArray = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 
   // need to create a place to store all of the chosen criterias
   let selectionChoices = [];
@@ -51,6 +50,13 @@ function generatePassword() {
   if (symbolChoice === true) {
     selectionChoices.push(...symbolArray);
   }
+  // wanted to add a message if none of the character arrays was selected then a message would return stating so
+  else if (selectionChoices.length === 0) {
+    window.alert("You have not followed the directions.\nStart over and select one of the options.");
+    return
+  } 
+  // validation of characters that are available based on the options selected are viewable in the console.log
+  console.log(selectionChoices);
 
   // need to choose randomized numbers from the ofType selections that were made and push them to a finalized container
   let randomizedPassword = [];
@@ -71,7 +77,7 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  
   passwordText.value = password;
 
 }
