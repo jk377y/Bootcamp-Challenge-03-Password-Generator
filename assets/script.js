@@ -59,10 +59,12 @@ function generatePassword() {
     window.alert("You have not followed the directions.\nStart over and select one of the options.");
     return
   } 
-  // validation of characters that are available based on the options selected are viewable in the console.log
+  // validation of characters that are available based on the options selected are viewable in the console.log and in alert window
   console.log(selectionChoices);
+  window.alert("You have chosen " + selectionChoices + " as possible characters to be used in your password.")
 
-  // need to choose i randomized numbers from the ofType selections that were made and push them to a final string
+  // selectionChoices have been combined into 1 array
+  // get random index via randomNumber variable = randomCharacter, then put those characters into randomizedPassword and combine all results in putThemTogether
   let randomizedPassword = [];
   for (let i = 0; i < pwLength; i++){
     let randomNumber = Math.random();
